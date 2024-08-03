@@ -1,0 +1,43 @@
+  .progress[value] {
+    --color: conic-gradient(var(--gradient) var(--progress),lightgrey 0);
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+  
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+  
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--color);
+    transform: rotate(225deg);
+    mask: radial-gradient(#0000 55%, #000 0% 50%), 
+    conic-gradient(from 270deg, #0000 90deg, #000 90deg 270deg);
+    mask-composite: intersect;
+  }
+  
+  .progress[value]::-webkit-progress-bar {
+    background: none;
+  }
+  
+  .progress[value]::-webkit-progress-value {
+    background: none;
+  }
+  
+  .progress[value]::-moz-progress-bar {
+    background: none;
+  }
+  
+  .label {
+    display: inline-grid;
+    place-content: center;
+    width: var(--size);
+    aspect-ratio: 1; 
+    position: relative;
+  }
+  
+  

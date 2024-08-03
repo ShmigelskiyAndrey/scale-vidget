@@ -1,10 +1,12 @@
 import './App.css';
+import { Widget } from './components/progress-widget';
 
 function App() {
-  const value = 99/4*3;
   return (
     <main>
-      <label>status <progress max={100} value={value} style={{"--p": `${value}%`}}>{value} %</progress></label>
+      <Widget value={70} color={["#31c6f7", "#31f74b"]} size={"350px"}>
+        <div>status</div>
+      </Widget>
     </main>
   );
 }
