@@ -6,21 +6,9 @@ main {
   align-items: center;
 }
 
-/* button {
-  width: 500px;
-  height: 500px;
-  background: red;
-  mask: radial-gradient(#0000 50%, #000 0% 50%), 
-  conic-gradient(from 135deg, #0000 90deg, #000 90deg 270deg);
-  mask-composite: intersect;
-  mask-repeat:no-repeat;
-} */
-
 progress[value] {
-  --w: 200px;
-  --d: linear-gradient(#e66465, #9198e5);
-  --color: conic-gradient(#31c6f7 var(--p),lightgrey 0); 
-  
+  /* --color: conic-gradient(#31c6f7, #31f74b var(--p),lightgrey 0%); */
+  --color: conic-gradient(#31c6f7, #31f74b var(--p),lightgrey 0);
 
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -36,18 +24,17 @@ progress[value] {
   overflow: hidden;
   background: var(--color);
   transform: rotate(225deg);
-  /* -webkit-mask: radial-gradient(#0000 59%,#000 60% 70%,#0000 71%); */
   mask: radial-gradient(#0000 55%, #000 0% 50%), 
   conic-gradient(from 270deg, #0000 90deg, #000 90deg 270deg);
   mask-composite: intersect;
 }
 
 progress[value]::-webkit-progress-bar {
-  background: var(--color);
+  background: none;
 }
 
 progress[value]::-webkit-progress-value {
-  background: var(--color);
+  background: none;
 }
 
 progress[value]::-moz-progress-bar {
