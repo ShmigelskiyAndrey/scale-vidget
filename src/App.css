@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main { 
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* button {
+  width: 500px;
+  height: 500px;
+  background: red;
+  mask: radial-gradient(#0000 50%, #000 0% 50%), 
+  conic-gradient(from 135deg, #0000 90deg, #000 90deg 270deg);
+  mask-composite: intersect;
+  mask-repeat:no-repeat;
+} */
+
+progress[value] {
+  --w: 200px;
+  --d: linear-gradient(#e66465, #9198e5);
+  --color: conic-gradient(#31c6f7 var(--p),lightgrey 0); 
+  
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--color);
+  transform: rotate(225deg);
+  /* -webkit-mask: radial-gradient(#0000 59%,#000 60% 70%,#0000 71%); */
+  mask: radial-gradient(#0000 55%, #000 0% 50%), 
+  conic-gradient(from 270deg, #0000 90deg, #000 90deg 270deg);
+  mask-composite: intersect;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+progress[value]::-webkit-progress-bar {
+  background: var(--color);
 }
+
+progress[value]::-webkit-progress-value {
+  background: var(--color);
+}
+
+progress[value]::-moz-progress-bar {
+  background: var(--color);
+}
+
+label {
+  --w: 350px; 
+  display: inline-grid;
+  place-content: center;
+  width: var(--w);
+  aspect-ratio: 1; 
+  position: relative;
+}
+
